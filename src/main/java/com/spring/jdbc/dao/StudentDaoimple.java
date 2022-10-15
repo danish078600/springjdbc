@@ -25,5 +25,11 @@ public class StudentDaoimple implements StudentDao{
 		
 		return r;
 	}
+	public int delete(int studentId) {
+		// delete
+		String q="delete from student where id=?";
+		int r=this.temp.update(q,studentId);
+		return r;
+	}
 
 }

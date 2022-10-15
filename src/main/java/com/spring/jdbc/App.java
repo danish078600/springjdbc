@@ -26,11 +26,14 @@ public class App
 //    	s.setCity("Muzaffarpur");
 //    	int r=studentDao.insert(s);
 //    	System.out.println(r+" rows added");
-    	Student s=new Student();
-    	s.setId(3);
-    	s.setName("me");
-    	s.setCity("na");
-    	int r=studentDao.update(s);
-    	System.out.println(r+" record updated");
+//    	Student s=new Student();
+//    	s.setId(3);
+//    	s.setName("me");
+//    	s.setCity("na");
+//    	int r=studentDao.update(s);
+//    	System.out.println(r+" record updated");
+    	
+    	int r= studentDao.delete(3);
+    	System.out.println(r+ " rows deleted");
     }
 }
