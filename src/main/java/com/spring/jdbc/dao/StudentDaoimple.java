@@ -18,5 +18,12 @@ public class StudentDaoimple implements StudentDao{
 		int r=this.temp.update(q,student.getId(),student.getName(),student.getCity());
 		return r;
 	}
+	public int update(Student student) {
+		// updating data
+		String q="update student set name=?,city=? where id=?";
+		int r=this.temp.update(q,student.getName(),student.getCity(),student.getId());
+		
+		return r;
+	}
 
 }

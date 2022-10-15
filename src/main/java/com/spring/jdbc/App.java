@@ -20,12 +20,17 @@ public class App
     	//spring jdbc template
     	ApplicationContext context=new ClassPathXmlApplicationContext("com/spring/jdbc/config.xml");
     	StudentDao studentDao= context.getBean("studentDao",StudentDao.class);
+//    	Student s=new Student();
+//    	s.setId(3);
+//    	s.setName("Monish");
+//    	s.setCity("Muzaffarpur");
+//    	int r=studentDao.insert(s);
+//    	System.out.println(r+" rows added");
     	Student s=new Student();
     	s.setId(3);
-    	s.setName("Monish");
-    	s.setCity("Muzaffarpur");
-    	int r=studentDao.insert(s);
-    	System.out.println(r+" rows added");
-    	
+    	s.setName("me");
+    	s.setCity("na");
+    	int r=studentDao.update(s);
+    	System.out.println(r+" record updated");
     }
 }
