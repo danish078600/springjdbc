@@ -33,7 +33,9 @@ public class App
 //    	int r=studentDao.update(s);
 //    	System.out.println(r+" record updated");
     	
-    	int r= studentDao.delete(3);
-    	System.out.println(r+ " rows deleted");
+//    	int r= studentDao.delete(3);
+//    	System.out.println(r+ " rows deleted");
+    	Student s= studentDao.getStudent(1);
+    	System.out.println(s);
     }
 }
