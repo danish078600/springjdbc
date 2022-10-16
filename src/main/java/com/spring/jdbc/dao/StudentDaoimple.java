@@ -1,5 +1,7 @@
 package com.spring.jdbc.dao;
 
+import java.util.List;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -38,6 +40,12 @@ public class StudentDaoimple implements StudentDao{
 		RowMapper<Student> rm=new RowMapperImpl();
 		Student s =this.temp.queryForObject(q,rm,studentId);
 		return s;
+	}
+	public List<Student> getAllStudent() {
+		// selecting multiple student
+		String q="select * from student";
+		List<Student> students=this.temp.query(q, new RowMapperImpl());
+		return students;
 	}
 
 }

@@ -1,5 +1,8 @@
 package com.spring.jdbc;
 
+import java.util.Iterator;
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -35,7 +38,13 @@ public class App
     	
 //    	int r= studentDao.delete(3);
 //    	System.out.println(r+ " rows deleted");
-    	Student s= studentDao.getStudent(1);
-    	System.out.println(s);
+//    	Student s= studentDao.getStudent(1);
+//    	System.out.println(s);
+    	List<Student> s=studentDao.getAllStudent();
+    	for (Student ss:s) {
+    		System.out.println(ss);
+			
+			
+		}
     }
 }
